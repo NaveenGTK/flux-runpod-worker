@@ -21,7 +21,6 @@ jobs:
         run: |
           echo "Repository: ${{ vars.DOCKERHUB_REPO }}"
           echo "Image Name: ${{ vars.DOCKERHUB_IMG }}"
-          echo "Tag: ${{ env.DOCKER_TAG }}"
 
 
       - name: Set up QEMU
