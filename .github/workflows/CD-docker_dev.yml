@@ -16,6 +16,14 @@ jobs:
           rm -rf "/usr/local/share/boost"
           rm -rf "$AGENT_TOOLSDIRECTORY"
 
+
+      - name: Log Docker Variables
+        run: |
+          echo "Repository: ${{ vars.DOCKERHUB_REPO }}"
+          echo "Image Name: ${{ vars.DOCKERHUB_IMG }}"
+          echo "Tag: ${{ env.DOCKER_TAG }}"
+
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
